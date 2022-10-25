@@ -21,14 +21,14 @@ public class PriceController {
 	}
 
 	// Petición de tipo GET para obtener el precio del elemento con el "id" especificado
-	@PostMapping(value= "/get-price/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value= "/get-price/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Prices getPrice(@PathVariable Integer id) {
 		return priceService.get(id);
 		
 	}
 	
 	// Petición de tipo GET para obtener todos los precios
-	@PostMapping(value="/get-all-prices", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="/get-all-prices", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Prices> getAllPrices() {
 		return priceService.getAllPrices();
 	}
