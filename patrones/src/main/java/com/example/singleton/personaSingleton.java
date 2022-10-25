@@ -2,19 +2,19 @@ package com.example.singleton;
 
 public final class personaSingleton {
 
-	private static personaSingleton personainstance;
+	private static personaSingleton Instance;
 	private String name;
 	private int age;
 
-	private personaSingleton() {
+	public personaSingleton() {
 	
 	}
 	   
 public static personaSingleton getInstance() {
-	if(personainstance == null) {
-		personainstance = new personaSingleton();
+	if(Instance == null) {
+		Instance = new personaSingleton();
 	}
-	return personainstance;
+	return Instance;
     }
 public void singletonOperation() {
 	System.out.println("Soy persona");
