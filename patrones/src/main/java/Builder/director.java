@@ -2,6 +2,13 @@ package Builder;
 
 public class director {
 	
+	
+	//CONTRUCTOR
+	public director(){
+		
+	}
+	
+	//TIPOS DE COCHE PARA CONSTRUIR
 	public void createcar(Builder builder) {
 		builder.setPuertas(4);
 		builder.setMatricula("55444hjk");

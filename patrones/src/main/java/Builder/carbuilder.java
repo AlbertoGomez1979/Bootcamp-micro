@@ -2,30 +2,43 @@ package Builder;
 
 public class carbuilder implements Builder {
 	
-	private String matricula;
-	private int ruedas;
-	private int puertas;
+	private coche coche;
+	
+	public carbuilder() {
+		this.reset();
+	}
 
 	@Override
-	public void setMatricula() {
-		this.matricula = matricula;
+	public void setMatricula(String matricula) {
+		this.coche.setMatricula(matricula);
 		
 	}
 
 	@Override
-	public void setRuedas() {
-		this.ruedas = ruedas;
+	public void setRuedas(int ruedas) {
+		this.coche.setRuedas(ruedas);
 		
 	}
 
 	@Override
-	public void setPuertas() {
-		this.puertas = puertas;
+	public void setPuertas(int puertas) {
+		this.coche.setPuertas(puertas);
 		
 	}
 	
-	public coche getCar() {
-		return new coche(matricula, ruedas, puertas);
+
+	@Override
+	public void reset() {
+		this.reset();
+		
 	}
+	
+	public coche build() {
+		coche product = this.coche;
+		this.reset();
+		return product;
+	}
+
+
 
 }

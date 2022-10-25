@@ -14,6 +14,10 @@ public class coche{
 		this.puertas = puertas;
 	}
 	
+	public coche() {
+		
+	}
+	
 	
 	public String getMatricula() {
 		return matricula;
@@ -34,6 +38,12 @@ public class coche{
 	public void setPuertas(int puertas) {
 		this.puertas = puertas;
 	}
+
+	@Override
+	public String toString() {
+		return "coche [matricula=" + matricula + ", ruedas=" + ruedas + ", puertas=" + puertas + "]";
+	}
+	
 	
 	
 
